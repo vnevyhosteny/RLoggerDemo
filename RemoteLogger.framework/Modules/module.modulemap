@@ -1,0 +1,6 @@
+framework module RemoteLogger {
+  umbrella header "RemoteLogger.h"
+
+  export *
+  module * { export * }
+}

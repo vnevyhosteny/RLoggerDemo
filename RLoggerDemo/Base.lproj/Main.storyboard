@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Base View">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EFP-U3-HGV" userLabel="Remote Switch">
+                                <rect key="frame" x="16" y="54" width="51" height="31"/>
+                                <connections>
+                                    <action selector="logModeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Loc-Kv-gBz"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rWr-he-Yak" userLabel="File Switch">
+                                <rect key="frame" x="87" y="54" width="51" height="31"/>
+                                <connections>
+                                    <action selector="logModeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xfg-l7-jmV"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Rm-EE-HPL" userLabel="Console Switch">
+                                <rect key="frame" x="159" y="54" width="51" height="31"/>
+                                <connections>
+                                    <action selector="logModeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="sUo-6k-nrk"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remote" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qn2-8z-xAR">
+                                <rect key="frame" x="16" y="25" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="File" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iw-ny-nsi">
+                                <rect key="frame" x="98" y="25" width="27" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Console" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YP2-Ld-Ili">
+                                <rect key="frame" x="144" y="25" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzC-Jp-op3" userLabel="Button View">
+                                <rect key="frame" x="504" y="94" width="80" height="486"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUD-4V-CNt">
+                                        <rect key="frame" x="0.0" y="40" width="80" height="30"/>
+                                        <state key="normal" title="DETAIL">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logLevelAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsH-5o-abt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GR-hF-tCQ">
+                                        <rect key="frame" x="0.0" y="80" width="80" height="30"/>
+                                        <state key="normal" title="DEBUG">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logLevelAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vlo-nA-LOO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYx-L6-Pfs">
+                                        <rect key="frame" x="0.0" y="120" width="80" height="30"/>
+                                        <state key="normal" title="INFO">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logLevelAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="69u-5J-qKG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iw8-Xt-hJq">
+                                        <rect key="frame" x="0.0" y="160" width="80" height="30"/>
+                                        <state key="normal" title="WARNING">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logLevelAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KhF-A9-dN7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYq-Vt-bPw">
+                                        <rect key="frame" x="0.0" y="200" width="80" height="32"/>
+                                        <state key="normal" title="ERROR">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logLevelAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zbm-DM-e8M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4T-G5-aaA">
+                                        <rect key="frame" x="0.0" y="240" width="80" height="30"/>
+                                        <state key="normal" title="FATAL">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logLevelAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RQk-uD-dWW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HW-xM-Q8J">
+                                        <rect key="frame" x="0.0" y="280" width="80" height="30"/>
+                                        <color key="backgroundColor" red="0.25882352939999997" green="0.79607843140000001" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="LOG!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wTn-o6-zkf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qk-9m-0cX">
+                                        <rect key="frame" x="0.0" y="2" width="80" height="30"/>
+                                        <state key="normal" title="ALL">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logLevelAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v7N-ik-rGc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="F6n-7Q-tps"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqb-2n-SYm">
+                                <rect key="frame" x="16" y="94" width="480" height="486"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="10"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uqb-2n-SYm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6Q3-3E-9yg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rzC-Jp-op3" secondAttribute="bottom" constant="20" id="AFe-W0-dCt"/>
+                            <constraint firstItem="rzC-Jp-op3" firstAttribute="leading" secondItem="uqb-2n-SYm" secondAttribute="trailing" constant="8" id="IJZ-4D-VzH"/>
+                            <constraint firstItem="rzC-Jp-op3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="74" id="K4w-wW-D96"/>
+                            <constraint firstItem="uqb-2n-SYm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="74" id="Vvv-lr-jeK"/>
+                            <constraint firstItem="rzC-Jp-op3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="e8C-xP-xlP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uqb-2n-SYm" secondAttribute="bottom" constant="20" id="i4U-a3-DlO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="uqb-2n-SYm" id="MvT-ZW-Tqw"/>
+                        <outletCollection property="logLevelButtonCollection" destination="8qk-9m-0cX" id="spf-uX-0ld"/>
+                        <outletCollection property="logLevelButtonCollection" destination="hUD-4V-CNt" id="Qrx-Zi-8E6"/>
+                        <outletCollection property="logLevelButtonCollection" destination="0GR-hF-tCQ" id="Czj-ag-Z4T"/>
+                        <outletCollection property="logLevelButtonCollection" destination="SYx-L6-Pfs" id="Q0G-4q-8KW"/>
+                        <outletCollection property="logLevelButtonCollection" destination="Iw8-Xt-hJq" id="pxl-jF-rTg"/>
+                        <outletCollection property="logLevelButtonCollection" destination="NYq-Vt-bPw" id="lDr-B6-gcf"/>
+                        <outletCollection property="logLevelButtonCollection" destination="D4T-G5-aaA" id="iJK-TM-Dm7"/>
+                        <outletCollection property="logModeSwitchesCollection" destination="EFP-U3-HGV" id="1K9-HA-1Qm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
