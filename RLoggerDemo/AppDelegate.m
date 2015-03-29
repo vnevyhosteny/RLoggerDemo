@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 nefa. All rights reserved.
 //
 
+#import <RemoteLogger/RemoteLogger.h>
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -15,8 +16,33 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    static dispatch_once_t __once_token__ = 0;
+    dispatch_once( &__once_token__, ^{
+        
+        LogMode  logMode;
+        LogLevel logLevel;
+        
+#if TARGET_IPHONE_SIMULATOR
+    #ifdef DEBUG
+        logMode  = LogModeConsole;
+        logLevel = log_level_all;
+    #else
+        logMode  = LogModeFile | LogModeRemote;
+        logLevel = log_level_error;
+    #endif
+#else
+    #ifdef DEBUG
+        logMode  = LogModeRemote | LogModeFile;
+        logLevel = log_level_all;
+    #else
+        logMode  = LogModeFile;
+        logLevel = log_level_error;
+    #endif
+#endif
+        [RemoteLogger createLoggerWithLogFolderName:nil logFileName:nil logMode:logMode logLevel:logLevel];
+    });
     return YES;
 }
 
